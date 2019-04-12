@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.MainActivity">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:text="Start Point"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_start_point"/>
+
+    <EditText
+            android:hint="Enter start latitude coordinates in Degree"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_start_point"
+            android:id="@+id/et_start_latitude"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:layout_below="@+id/et_start_latitude"
+            android:padding="8dp"
+            android:hint="Enter start longitude coordinates in Degree"
+            android:layout_width="match_parent"
+            android:id="@+id/et_start_longitude"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:text="End Point"
+            android:layout_below="@id/et_start_longitude"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_end_point"/>
+
+    <EditText
+            android:hint="Enter end latitude coordinates in Degree"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_end_point"
+            android:id="@+id/et_end_latitude"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:layout_below="@+id/et_end_latitude"
+            android:padding="8dp"
+            android:hint="Enter end longitude coordinates in Degree"
+            android:layout_width="match_parent"
+            android:id="@+id/et_end_longitude"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/et_end_longitude"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_result"/>
+
+    <LinearLayout
+            android:id="@+id/ll_fabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_history_white_24dp"
+                app:fabSize="mini"/>
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_settings_white_24dp"
+                app:fabSize="normal"/>
+    </LinearLayout>
+</RelativeLayout>
